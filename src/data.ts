@@ -16,17 +16,34 @@ export type User = {
    * TODO: You should consider hashing and salting this for security reasons.
    */
   password: string
+  username: string
+  userId: number
+  dateCreated: number
+}
+
+// Sessions
+export type Session = {
+  userId: number
+  sessionId: string
+}
+
+// UserDetails
+export type UserDetails = {
+  username: string
+  dateCreated: number
+  numReviews: number
 }
 
 /** The overall data for the app */
 export type Data = {
   /** Array of users */
   users: User[]
+  sessions: Session[]
 };
 
 /** Returns the default data object */
 export function defaultData(): Data {
-  return { users: [] };
+  return { users: [], sessions: []};
 }
 
 // TODO: Modify these functions to implement persistence (or set up a proper
