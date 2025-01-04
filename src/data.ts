@@ -9,36 +9,51 @@
 /** Data for a user */
 export type User = {
   /** The email address of the user */
-  email: string
+  email: string;
   /**
    * The password of the user.
    *
    * TODO: You should consider hashing and salting this for security reasons.
    */
-  password: string
-  username: string
-  userId: number
-  dateCreated: number
+  password: string;
+  username: string;
+  userId: number;
+  dateCreated: number;
+  reviews: Review[];
 }
 
 // Sessions
 export type Session = {
-  userId: number
-  sessionId: string
+  userId: number;
+  sessionId: string;
 }
 
 // UserDetails
 export type UserDetails = {
-  username: string
-  dateCreated: number
-  numReviews: number
+  username: string;
+  dateCreated: number;
+  numReviews: number;
+  Reviews: Review[];
+}
+
+// Enum of shows
+export enum Show {
+  SCIENCE_WITH_SALT = 'SCIENCE_WITH_SALT'
+}
+
+// Review
+export type Review = {
+  score: number;
+  show: Show;
+  description: string;
+  reviewId: number;
 }
 
 /** The overall data for the app */
 export type Data = {
   /** Array of users */
-  users: User[]
-  sessions: Session[]
+  users: User[];
+  sessions: Session[];
 };
 
 /** Returns the default data object */

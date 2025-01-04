@@ -1,5 +1,5 @@
 // User functions
-import { User, Session, UserDetails } from './data';
+import { User, Session, UserDetails, Data } from './data';
 
 /**
   * Registers a user with email, password and username then returns
@@ -53,6 +53,12 @@ import { User, Session, UserDetails } from './data';
   * Logs out user
   *
   * @param {string} token - Token
+  *
+  * @returns {object}
+*/
+
+/**
+  * Clears all data
   *
   * @returns {object}
 */
