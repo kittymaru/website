@@ -1,5 +1,5 @@
 // User functions
-import { User, Session, UserDetails, Data } from './data';
+import { User, Session, UserDetails, Data, getData } from './data';
 
 /**
   * Registers a user with email, password and username then returns

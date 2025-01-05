@@ -36,15 +36,19 @@ export type UserDetails = {
   Reviews: Review[];
 }
 
-// Enum of shows
-export enum Show {
-  SCIENCE_WITH_SALT = 'SCIENCE_WITH_SALT'
+// Shows
+export type Show = {
+  name: string;
+  showId: number;
+  description: string;
+  averageScore: number;
 }
 
 // Review
 export type Review = {
+  name: number;
   score: number;
-  show: Show;
+  showId: number;
   description: string;
   reviewId: number;
 }
@@ -54,11 +58,12 @@ export type Data = {
   /** Array of users */
   users: User[];
   sessions: Session[];
+  shows: Show[];
 };
 
 /** Returns the default data object */
 export function defaultData(): Data {
-  return { users: [], sessions: []};
+  return { users: [], sessions: [], shows: []};
 }
 
 // TODO: Modify these functions to implement persistence (or set up a proper
