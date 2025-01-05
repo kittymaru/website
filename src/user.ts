@@ -63,5 +63,14 @@ import { User, Session, UserDetails, Data, getData } from './data';
   * @returns {object}
 */
 
+export function clear() {
+  const data = getData();
+  data.users.length = 0;
+  data.sessions.length = 0;
+  data.shows.length = 0;
+
+  return {};
+}
+
 
 
