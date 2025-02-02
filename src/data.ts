@@ -63,7 +63,7 @@ export type Data = {
 
 /** Returns the default data object */
 export function defaultData(): Data {
-  return { users: [], sessions: [], shows: []};
+  return { users: [], sessions: [], shows: [] };
 }
 
 // TODO: Modify these functions to implement persistence (or set up a proper

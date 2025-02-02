@@ -10,8 +10,19 @@ import { User, Session, UserDetails, Data, getData } from './data';
   * @param {string} username - Username
   *
   * @returns {{userId: number}}
+  *
+  * Errors:
+  * - Email is already used
+  * - Username is already used
+  * - Any fields are blank
+  * - Password is not longer than 8 characters
+  * - Email is invalid
+  * - Username contains characters other than letters and numbers
 */
 
+export function userRegister(email: string, password: string, username: string) {
+
+}
 
 /**
   * Logs in logged out user with username and password
@@ -71,6 +82,3 @@ export function clear() {
 
   return {};
 }
-
-
-
